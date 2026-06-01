@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kabisha Scholarship Programs — The Gambia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Index-specific only */
+  .hero { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; }
+
+  /* Scholarship chooser cards */
+  .chooser {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+    padding: 0 6vw;
+  }
+  .chooser-card {
+    background: var(--white);
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    padding: 2.25rem 2rem;
+    text-decoration: none;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+  .chooser-card:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  }
+  .chooser-card.hs { border-top: 4px solid var(--gold); }
+  .chooser-card.uni { border-top: 4px solid var(--green); }
+  .chooser-tag {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 1rem;
+    display: inline-block; padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+  }
+  .chooser-card.hs  .chooser-tag { background: rgba(245,166,35,0.12); color: #7a5200; }
+  .chooser-card.uni .chooser-tag { background: rgba(27,107,58,0.1); color: var(--green); }
+  .chooser-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    line-height: 1.2; margin-bottom: 0.75rem;
+  }
+  .chooser-card p {
+    font-size: 0.9rem; color: var(--ink-mid);
+    line-height: 1.65; flex-grow: 1; margin-bottom: 1.5rem;
+  }
+  .chooser-benefits {
+    list-style: none; margin-bottom: 1.75rem;
+  }
+  .chooser-benefits li {
+    font-size: 0.85rem; color: var(--ink-mid);
+    padding: 0.35rem 0;
+    display: flex; align-items: center; gap: 0.6rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .chooser-benefits li:last-child { border-bottom: none; }
+  .chooser-benefits li::before {
+    content: '✓'; color: var(--green);
+    font-weight: 700; flex-shrink: 0;
+  }
+  .chooser-cta {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-weight: 700; font-size: 0.88rem;
+    text-decoration: none; margin-top: auto;
+  }
+  .chooser-card.hs  .chooser-cta { color: #7a5200; }
+  .chooser-card.uni .chooser-cta { color: var(--green); }
+  .chooser-cta::after { content: '→'; transition: transform 0.2s; }
+  .chooser-card:hover .chooser-cta::after { transform: translateX(4px); }
+
+  /* About strip */
+  .about-strip {
+    padding: 5rem 6vw;
+    background: var(--white);
+  }
+  .about-strip p {
+    font-size: 1rem; color: var(--ink-mid);
+    max-width: 60ch; line-height: 1.8;
+  }
+  .about-strip blockquote {
+    margin-top: 2rem;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.25rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--ink);
+    line-height: 1.5; max-width: 50ch;
+  }
+
+  /* Values row */
+  .values-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem; margin-top: 3rem;
+  }
+  .value-item { padding: 1.25rem 0; border-top: 2px solid var(--gold); }
+  .value-item h4 { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
+  .value-item p  { font-size: 0.84rem; color: var(--ink-lt); line-height: 1.55; }
+
+  @media (max-width: 768px) {
+    .chooser { grid-template-columns: 1fr; margin-top: -2rem; padding: 0 1.25rem; }
+    .about-strip { padding: 3.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Kabisha</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="highschool.html">High School</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="highschool.html#apply" class="nav-cta">Apply Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div style="padding: 5rem 6vw 6rem">
+    <span class="hero-label">The Gambia · Scholarship Programs</span>
+    <h1>Invest in your<br><em>education.</em><br>Invest in Gambia.</h1>
+    <p>The Kabisha Scholarship Programs support ambitious Gambian students — from high school through university — pursuing education at home.</p>
+    <div class="hero-actions">
+      <a href="highschool.html" class="btn btn-gold">High School Scholarship</a>
+      <a href="university.html" class="btn btn-outline">University Scholarship</a>
+    </div>
+  </div>
+</div>
+<div class="flag-stripe"></div>
+
+<!-- SCHOLARSHIP CHOOSER -->
+<div class="chooser">
+
+  <a href="highschool.html" class="chooser-card hs fade-in">
+    <span class="chooser-tag">High School</span>
+    <h2>Kabisha Future Scholars Program</h2>
+    <p>School fees covered plus a monthly stipend for students currently enrolled in high school. Designed for students who need financial support to stay in school — with strong priority for rural communities.</p>
+    <ul class="chooser-benefits">
+      <li>Full school fees covered</li>
+      <li>Monthly living stipend</li>
+      <li>Rural students — first priority</li>
+      <li>Optional tech mentorship</li>
+    </ul>
+    <span class="chooser-cta">Learn more &amp; apply</span>
+  </a>
+
+  <a href="university.html" class="chooser-card uni fade-in" style="transition-delay:0.1s">
+    <span class="chooser-tag">University</span>
+    <h2>Kabisha Scholars Program</h2>
+    <p>Full-attendance university scholarship for Gambian students pursuing higher education at accredited local institutions. A rolling application — apply when you're ready.</p>
+    <ul class="chooser-benefits">
+      <li>Full attendance coverage</li>
+      <li>UTG, Gambia College &amp; more</li>
+      <li>Rolling application, no fixed deadline</li>
+      <li>Optional mentorship &amp; co-op</li>
+    </ul>
+    <span class="chooser-cta">Learn more &amp; apply</span>
+  </a>
+
+</div>
+
+<!-- ABOUT -->
+<div class="about-strip">
+  <div class="section-label">Our Mission</div>
+  <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.65rem,3vw,2.3rem); font-weight:700; margin-bottom:1rem;">Building <span style="color:var(--green)">Gambia's Future</span><br>Through Education</h2>
+  <p>The Kabisha Scholarship Programs believe that every talented Gambian student deserves the chance to learn, grow, and give back. We prioritize students with financial need, clear ambition, and a commitment to contributing to national development — especially those from rural and underserved communities.</p>
+  <blockquote>A serious student with a clear direction and a commitment to Gambia's future — that's who we're looking for.</blockquote>
+  <div class="values-row fade-in">
+    <div class="value-item"><h4>Need-Based</h4><p>Financial need is always weighted. Support reaches those who need it most.</p></div>
+    <div class="value-item"><h4>Gambia-First</h4><p>We fund Gambian institutions only — building talent that stays and contributes at home.</p></div>
+    <div class="value-item"><h4>Rural Priority</h4><p>Students from rural backgrounds and schools receive the highest priority consideration.</p></div>
+    <div class="value-item"><h4>Development Fields</h4><p>Science, engineering, education, and technical fields are given priority in selection.</p></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Kabisha Scholarship Programs</div>
+    <p>Empowering Gambian students through education &amp; opportunity.</p>
+    <div class="footer-links">
+      <a href="highschool.html">High School Scholarship</a>
+      <a href="university.html">University Scholarship</a>
+    </div>
+  </div>
+  <div class="footer-flag">
+    <span style="background:#3A7728"></span>
+    <span style="background:#fff"></span>
+    <span style="background:#C8102E"></span>
+    <span style="background:#fff"></span>
+    <span style="background:#3A7728"></span>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+  }), {threshold: 0.08});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
