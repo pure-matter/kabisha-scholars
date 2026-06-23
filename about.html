@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Kabisha Foundation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .story {
+    padding: 5rem 6vw; background: var(--white);
+    display: grid; grid-template-columns: 220px 1fr; gap: 5rem; align-items: start;
+  }
+  .story-aside { position: sticky; top: 76px; }
+  .story-aside h3 {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-lt);
+    margin-bottom: 1rem; padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .story-aside a {
+    display: block; font-size: 0.85rem; color: var(--ink-lt);
+    text-decoration: none; padding: 0.45rem 0;
+    border-bottom: 1px solid var(--border); transition: color 0.2s;
+  }
+  .story-aside a:last-child { border-bottom: none; }
+  .story-aside a:hover { color: var(--green); }
+
+  .story-body p {
+    font-size: 1.05rem; color: var(--ink-mid);
+    line-height: 1.85; margin-bottom: 1.75rem; max-width: 60ch;
+  }
+  .pullquote {
+    margin: 2rem 0; padding: 1.4rem 1.75rem;
+    border-left: 4px solid var(--gold);
+    background: rgba(245,166,35,0.05);
+    border-radius: 0 8px 8px 0;
+  }
+  .pullquote p {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.2rem !important; color: var(--ink) !important;
+    line-height: 1.5 !important; margin-bottom: 0 !important;
+    font-style: italic;
+  }
+
+  .partnership { padding: 5rem 6vw; background: var(--cream); }
+  .partner-card {
+    display: grid; grid-template-columns: 64px 1fr; gap: 2rem;
+    align-items: center; background: var(--white);
+    border-radius: 12px; border: 1.5px solid var(--border);
+    padding: 2rem; margin-top: 2.5rem; text-decoration: none;
+    color: var(--ink); transition: border-color 0.2s, transform 0.2s;
+  }
+  .partner-card:hover { border-color: var(--green); transform: translateY(-2px); }
+  .partner-icon {
+    width: 64px; height: 64px; border-radius: 10px;
+    background: var(--green-dk); display: flex;
+    align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .partner-icon svg { width: 28px; height: 28px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .partner-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.35rem; }
+  .partner-card p { font-size: 0.88rem; color: var(--ink-mid); line-height: 1.65; margin-bottom: 0.65rem; }
+  .partner-link { font-size: 0.82rem; color: var(--green); font-weight: 600; }
+
+  .vision {
+    background: var(--green-dk); padding: 5.5rem 6vw;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .vision::before {
+    content: attr(data-bg);
+    position: absolute; font-family: 'Playfair Display', serif;
+    font-size: 22vw; font-weight: 900; color: rgba(255,255,255,0.025);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    pointer-events: none; white-space: nowrap; letter-spacing: -0.02em;
+  }
+  .vision .section-label { color: var(--gold); }
+  .vision h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.75rem);
+    color: var(--white); font-weight: 700;
+    max-width: 20ch; margin: 0 auto 1.25rem; line-height: 1.25;
+    position: relative; z-index: 1;
+  }
+  .vision h2 span { color: var(--gold); }
+  .vision > p {
+    font-size: 1rem; color: rgba(255,255,255,0.62);
+    max-width: 50ch; margin: 0 auto 2.5rem;
+    line-height: 1.75; position: relative; z-index: 1;
+  }
+  .vision-pills {
+    display: flex; flex-wrap: wrap; gap: 0.65rem;
+    justify-content: center; margin-bottom: 3rem;
+    position: relative; z-index: 1;
+  }
+  .vision-pill {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.13);
+    color: rgba(255,255,255,0.7);
+    border-radius: 100px; padding: 0.38rem 1rem; font-size: 0.82rem;
+  }
+  .vision-close {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; color: rgba(255,255,255,0.85);
+    font-style: italic; margin-bottom: 2.5rem;
+    position: relative; z-index: 1;
+  }
+
+  @media(max-width:900px){
+    .story { grid-template-columns: 1fr; gap: 2.5rem; }
+    .story-aside { position: static; }
+    .partner-card { grid-template-columns: 1fr; }
+  }
+  @media(max-width:768px){
+    .story, .partnership, .vision { padding: 3.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Kabisha</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="highschool.html">Secondary School</a></li>
+    <li><a href="university.html">University</a></li>
+    <li><a href="highschool.html#apply" class="nav-cta">Apply Now</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <span class="hero-label">About</span>
+  <h1>Kabisha <em>Foundation</em></h1>
+  <p>Talent should never be limited by financial circumstances. That belief is where everything started — and everything we do flows from it.</p>
+</div>
+<div class="accent-line"></div>
+
+<!-- STORY -->
+<div class="story">
+  <div class="story-aside fade-in">
+    <h3>On this page</h3>
+    <a href="#origin">How it started</a>
+    <a href="#mission">Our mission</a>
+    <a href="#partnership">Our partnership</a>
+    <a href="#vision">Long-term vision</a>
+  </div>
+
+  <div class="story-body fade-in" style="transition-delay:0.1s">
+    <div id="origin">
+      <p>Kabisha Foundation was created from a simple belief: <strong>talented students should not be limited by financial circumstances.</strong></p>
+      <p>Growing up in The Gambia and later moving to the United States, I experienced firsthand how education can open doors and create opportunities that would otherwise seem out of reach. Many of the opportunities that shaped my own journey came from people and programs that invested in students and believed in their potential.</p>
+      <div class="pullquote"><p>The Kabisha Foundation is my way of paying that forward.</p></div>
+    </div>
+
+    <div id="mission">
+      <p>Today, the Foundation supports Gambian students through scholarships, mentorship, and educational opportunities designed to help young people reach their goals and contribute to their communities. We place special emphasis on students from rural and underserved areas, where financial barriers often prevent talented students from continuing their education.</p>
+      <p>Our scholarship programs support students from secondary school through university helping them stay in school, complete their studies, and prepare for meaningful careers. When a student succeeds, their family, their community, and their country all benefit.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PARTNERSHIP -->
+<div class="partnership" id="partnership">
+  <div class="section-label">Our Partnership</div>
+  <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.65rem,3vw,2.3rem); font-weight:700; line-height:1.2; margin-bottom:0.75rem;">Affiliated with <span style="color:var(--green)">JVH Museum</span></h2>
+  <p style="font-size:0.97rem; color:var(--ink-mid); max-width:55ch; line-height:1.75; margin-bottom:0">The Foundation is currently funded through personal contributions and operates in partnership with the Juffureh Heritage Museum — reflecting a shared commitment to preserving opportunity, knowledge, and community development in The Gambia.</p>
+
+  <a href="https://jvhmuseum.org/" target="_blank" rel="noopener" class="partner-card fade-in">
+    <div class="partner-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div>
+      <h3>Juffureh Heritage Museum</h3>
+      <p>The JVH Museum is dedicated to preserving the history, culture, and heritage of Juffureh and The Gambia. Our partnership reflects a shared belief that investing in knowledge — past and future — is how communities grow and endure.</p>
+      <span class="partner-link">jvhmuseum.org ↗</span>
+    </div>
+  </a>
+</div>
+
+<!-- VISION -->
+<div class="vision" data-bg="KF" id="vision">
+  <div class="section-label">Looking Ahead</div>
+  <h2>Building something <span>that lasts</span></h2>
+  <p>This is only the beginning. Our long-term vision is to build a sustainable network of scholars, mentors, educators, and supporters committed to investing in the next generation of Gambian leaders.</p>
+  <div class="vision-pills">
+    <span class="vision-pill">Scholars across The Gambia</span>
+    <span class="vision-pill">Mentors in tech and education</span>
+    <span class="vision-pill">Rural communities first</span>
+    <span class="vision-pill">Diaspora giving back</span>
+    <span class="vision-pill">Fields that build the nation</span>
+  </div>
+  <p class="vision-close">When we invest in education, we invest in The Gambia's future.</p>
+  <a href="index.html" class="btn btn-gold" style="position:relative;z-index:1">View Our Scholarships</a>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Kabisha Foundation</div>
+    <p>Empowering Gambian students through education &amp; opportunity.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="highschool.html">Secondary School Scholarship</a>
+      <a href="university.html">University Scholarship</a>
+      <a href="https://jvhmuseum.org/" target="_blank" rel="noopener">JVH Museum ↗</a>
+    </div>
+  </div>
+  <div class="footer-accent"></div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+  }), {threshold: 0.08});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

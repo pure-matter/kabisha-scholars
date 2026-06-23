@@ -8,56 +8,41 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  .hero-pills { display:flex; flex-wrap:wrap; gap:0.65rem; margin-bottom:2rem; }
-  .pill {
-    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.75); border-radius: 100px;
-    padding: 0.35rem 0.9rem; font-size: 0.8rem;
-  }
-  .pill.gold { background: rgba(245,166,35,0.15); border-color: rgba(245,166,35,0.4); color: var(--gold); }
-</style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-logo">Kabisha</a>
   <ul class="nav-links">
-    <li><a href="index.html">← Home</a></li>
-    <li><a href="#eligibility">Eligibility</a></li>
-    <li><a href="#documents">Documents</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="highschool.html">Secondary School</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#apply" class="nav-cta">Apply Now</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <span class="hero-label">University Scholarship</span>
   <h1>Kabisha <em>Scholars</em><br>Program</h1>
-  <div class="hero-pills">
-    <span class="pill gold">Full Attendance Coverage</span>
-    <span class="pill">Rolling Application</span>
-    <span class="pill">UTG · Gambia College · &amp; more</span>
-  </div>
-  <p>A full-attendance university scholarship for Gambian students studying at home. Apply when you're ready — decisions are made on a rolling basis.</p>
+  <p>Full-attendance university scholarship for Gambian students studying at home. Apply when you're ready — decisions are made on a rolling basis.</p>
   <div class="hero-actions">
     <a href="#apply" class="btn btn-gold">Apply Now</a>
     <a href="#eligibility" class="btn btn-outline">Check Eligibility</a>
   </div>
 </div>
-<div class="flag-stripe"></div>
+<div class="accent-line"></div>
 
-<!-- WHAT IT COVERS -->
+<!-- COVERS -->
 <section class="section white" id="covers">
   <div class="section-label">Scholarship Benefits</div>
   <h2>What the Scholarship <span>Covers</span></h2>
-  <p>Full attendance at an accredited Gambian university or college. Here's what that includes.</p>
+  <p>Full attendance at an accredited Gambian university or college — current and future enrollment only.</p>
   <div class="card-grid fade-in">
-    <div class="card"><span class="card-icon">📚</span><h3>Tuition &amp; Fees</h3><p>Full academic year tuition and institutional fees at your enrolled institution.</p></div>
-    <div class="card"><span class="card-icon">🏫</span><h3>Eligible Institutions</h3><p>University of The Gambia (UTG), Gambia College, and other accredited Gambian colleges.</p></div>
-    <div class="card"><span class="card-icon">🔄</span><h3>Renewable</h3><p>Renewable each year subject to continued enrollment and academic performance.</p></div>
-    <div class="card"><span class="card-icon">💻</span><h3>Optional Extras</h3><p>Tech mentorship (CS &amp; cybersecurity) and co-op opportunities for eligible students.</p></div>
+    <div class="card"><span class="card-accent"></span><h3>Tuition &amp; Fees</h3><p>Full academic year tuition and institutional fees at your enrolled institution.</p></div>
+    <div class="card"><span class="card-accent"></span><h3>Eligible Institutions</h3><p>University of The Gambia (UTG), Gambia College, and other accredited Gambian colleges.</p></div>
+    <div class="card"><span class="card-accent"></span><h3>Renewable</h3><p>Renewed each year subject to continued enrollment and academic performance.</p></div>
+    <div class="card"><span class="card-accent"></span><h3>Optional Extras</h3><p>Tech mentorship and internship opportunities available to eligible students at no cost.</p></div>
   </div>
 </section>
 
@@ -65,10 +50,10 @@
 <section class="section cream" id="eligibility">
   <div class="section-label">Who Can Apply</div>
   <h2>Eligibility &amp; <span>Selection</span></h2>
-  <p>Meet the basic requirements to be eligible. Selection from eligible applicants is based on the priority criteria below.</p>
+  <p>Meet the basic requirements to be eligible. Selection from eligible applicants weighs the priority criteria below.</p>
   <div class="two-col fade-in">
     <div>
-      <p style="font-weight:600; font-size:0.93rem; margin-bottom:0.5rem">Basic Requirements</p>
+      <p style="font-weight:600; font-size:0.92rem; margin-bottom:0.5rem">Basic Requirements</p>
       <ul class="check-list">
         <li>Grade 12 graduate (WASSCE holder) or completed/ongoing diploma</li>
         <li>Planning to study — or currently enrolled — at a Gambian institution</li>
@@ -77,12 +62,12 @@
         <li>Demonstrated financial need</li>
         <li>Clear academic direction and career objective</li>
       </ul>
-      <ul class="rule-list">
-        <li class="no"><span>❌</span> No funding for studying abroad</li>
-        <li class="no"><span>❌</span> Does not cover arrears or old fees</li>
-        <li class="no"><span>❌</span> Changing your course requires reapplying</li>
-        <li class="yes"><span>✅</span> Rolling application — apply anytime</li>
-        <li class="yes"><span>✅</span> All applicants notified before the academic year</li>
+      <ul class="rule-list" style="margin-top:1.5rem">
+        <li class="no"><span class="rule-mark">No</span> Funding for studying abroad</li>
+        <li class="no"><span class="rule-mark">No</span> Payment of arrears or old fees</li>
+        <li class="no"><span class="rule-mark">No</span> Course changes without reapplying</li>
+        <li class="yes"><span class="rule-mark">Yes</span> Rolling application — apply anytime</li>
+        <li class="yes"><span class="rule-mark">Yes</span> All applicants notified before the academic year</li>
       </ul>
     </div>
     <div>
@@ -90,12 +75,12 @@
         <h4>Priority Selection</h4>
         <p>From eligible applicants, these factors boost your chances significantly:</p>
         <div class="tag-wrap">
-          <span class="tag">🏘️ Rural background or school</span>
-          <span class="tag">🔬 Science or technical field</span>
-          <span class="tag">🏗️ Engineering or construction</span>
-          <span class="tag">🏫 Teaching career interest</span>
-          <span class="tag">🌾 Willing to study rurally</span>
-          <span class="tag">💡 First-generation student</span>
+          <span class="tag">Rural background or school</span>
+          <span class="tag">Science or technical field</span>
+          <span class="tag">Engineering or construction</span>
+          <span class="tag">Teaching career interest</span>
+          <span class="tag">Willing to study rurally</span>
+          <span class="tag">First-generation student</span>
         </div>
       </div>
     </div>
@@ -106,7 +91,7 @@
 <section class="section white" id="documents">
   <div class="section-label">What to Prepare</div>
   <h2>Required <span>Documents</span></h2>
-  <p>If selected, you'll need to provide these. Gather them before you apply.</p>
+  <p>Gather these before you apply. If selected, official verification will be requested.</p>
   <div class="two-col fade-in">
     <div>
       <div class="doc-row"><div class="doc-num">1</div><div><div class="doc-name">Completed Application Form</div><div class="doc-note">Fully filled — proper spelling and capitalization required</div></div></div>
@@ -114,15 +99,15 @@
       <div class="doc-row"><div class="doc-num">3</div><div><div class="doc-name">Admission Letter</div><div class="doc-note">If already available from your institution</div></div></div>
       <div class="doc-row"><div class="doc-num">4</div><div><div class="doc-name">Valid Government ID</div><div class="doc-note">Passport or National ID card</div></div></div>
       <div class="doc-row"><div class="doc-num">5</div><div><div class="doc-name">Passport Photograph</div><div class="doc-note">Recent, clear, passport-size</div></div></div>
-      <div class="doc-row"><div class="doc-num">6</div><div><div class="doc-name">Essay (300–500 words)</div><div class="doc-note">Included in the application form — see instructions below</div></div></div>
+      <div class="doc-row"><div class="doc-num">6</div><div><div class="doc-name">Essay (300–500 words)</div><div class="doc-note">Included in the application form</div></div></div>
     </div>
     <div>
       <div class="warn-box">
-        <h5>⚠️ Incomplete Applications Are Disqualified</h5>
-        <p>We cannot accept additions after submission. Double-check every section. Award letters are generated from your submitted data — use correct spelling and punctuation.</p>
+        <h5>Incomplete applications are disqualified</h5>
+        <p>We cannot accept additions after submission. Award letters are generated from your submitted data — use correct spelling and punctuation throughout.</p>
       </div>
       <div class="info-box" style="margin-top:1.1rem">
-        <strong>Essay prompt:</strong> 300–500 words on your college goals, choice of major, what you intend to do with your education, and why a scholarship matters to you. Include any accomplishments or experiences that make you uniquely deserving.
+        <strong>Essay prompt:</strong> 300–500 words on your college goals, choice of major, what you intend to do with your education, and why a scholarship matters to you.
       </div>
     </div>
   </div>
@@ -135,8 +120,8 @@
   <p>No fixed deadline — rolling application. Apply early for best consideration.</p>
   <div class="steps fade-in">
     <div class="step"><div class="step-num">01</div><h3>Gather Documents</h3><p>WASSCE results, ID, admission letter (if available), passport photo.</p></div>
-    <div class="step"><div class="step-num">02</div><h3>Complete the Form</h3><p>Fill every section. Use proper spelling — award letters use your submitted data.</p></div>
-    <div class="step"><div class="step-num">03</div><h3>Write Your Essay</h3><p>300–500 words on your goals, major, and why a scholarship matters to you.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>Complete the Form</h3><p>Fill every section carefully. Use proper spelling — award letters use your data.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>Write Your Essay</h3><p>300–500 words on your goals, your major, and why a scholarship matters to you.</p></div>
     <div class="step"><div class="step-num">04</div><h3>Submit &amp; Wait</h3><p>All applicants notified on or before the beginning of the academic year.</p></div>
   </div>
 </section>
@@ -144,16 +129,25 @@
 <!-- MENTORSHIP -->
 <section class="section white" id="mentorship">
   <div class="section-label">Optional Add-On</div>
-  <h2>Mentorship &amp; <span>Co-op</span></h2>
-  <p>Indicate your interest on the application form. These programs are free and have no effect on your scholarship selection.</p>
+  <h2>Mentorship &amp; <span>internship</span></h2>
+  <p>Indicate your interest on the application form. Free, optional, no effect on your scholarship selection.</p>
   <div class="two-col fade-in">
     <div>
-      <div class="track"><div class="track-icon cs">💻</div><div><h4>Computer Science Mentorship</h4><p>Available to CS students only — career guidance from working professionals</p></div></div>
-      <div class="track"><div class="track-icon cy">🔐</div><div><h4>Cybersecurity Mentorship</h4><p>Available to cybersecurity students only — network defense, ethical hacking</p></div></div>
-      <div class="track"><div class="track-icon tech">🤝</div><div><h4>Co-op Opportunities</h4><p>Part-time work relevant to your major for additional tuition support — all majors</p></div></div>
+      <div class="track">
+        <div class="track-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;color:var(--green)"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div><h4>Computer Science Mentorship</h4><p>Available to CS students — career guidance from working professionals</p></div>
+      </div>
+      <div class="track">
+        <div class="track-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;color:var(--green)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h4>Cybersecurity Mentorship</h4><p>Available to cybersecurity students — network defense, ethical hacking</p></div>
+      </div>
+      <div class="track">
+        <div class="track-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;color:var(--green)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div><h4>Internship Opportunities</h4><p>Part-time work relevant to your major for additional tuition support — all majors</p></div>
+      </div>
     </div>
     <div>
-      <div class="info-box">These programs are <strong>completely optional</strong> and have <strong>no effect</strong> on your scholarship application or selection. Indicate your interest on the form and we'll be in touch.</div>
+      <div class="info-box">These programs are completely optional and have no effect on your scholarship application or selection. Indicate your interest on the form and we'll follow up.</div>
     </div>
   </div>
 </section>
@@ -162,24 +156,24 @@
 <section class="section cream" id="faq">
   <div class="section-label">Common Questions</div>
   <h2>Frequently Asked <span>Questions</span></h2>
-  <div class="faq-list fade-in" style="max-width:760px; margin-top:2.5rem">
-    <div class="faq-item"><button class="faq-q">Is there a deadline to apply? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">The Kabisha Scholars Program is a <strong>rolling application</strong> — no fixed deadline. Applying early gives you the best chance, as decisions are made throughout the year.</div></div></div>
-    <div class="faq-item"><button class="faq-q">Do I need an admission letter? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. You can apply with a clear <strong>intention to enroll</strong>. If selected, you'll need to provide one before the award is finalized.</div></div></div>
-    <div class="faq-item"><button class="faq-q">Are WASSCE scores required? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not required for eligibility. But providing your score <strong>improves your chances</strong>. If you report one, official verification will be required upon selection.</div></div></div>
-    <div class="faq-item"><button class="faq-q">Can I change my course after receiving the scholarship? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. Changing your course of study requires you to <strong>reapply</strong>. The scholarship is awarded based on the declared field of study.</div></div></div>
-    <div class="faq-item"><button class="faq-q">Can I use it to study outside The Gambia? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. The scholarship covers studies at <strong>accredited Gambian institutions only</strong> — UTG, Gambia College, and other recognized local colleges.</div></div></div>
+  <div class="faq-list fade-in" style="max-width:720px; margin-top:2.5rem">
+    <div class="faq-item"><button class="faq-q">Is there a deadline to apply? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">The Kabisha Scholars Program is a rolling application — no fixed deadline. Applying early gives you the best chance, as decisions are made throughout the year.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Do I need an admission letter? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. You can apply with a clear intention to enroll. If selected, you'll need to provide one before the award is finalized.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Are WASSCE scores required? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not required for eligibility. Providing your score improves your chances. If you report one, official verification will be required upon selection.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Can I change my course after receiving the scholarship? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. Changing your course of study requires you to reapply. The scholarship is awarded based on the field of study you declared.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Can I use it to study outside The Gambia? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. The scholarship covers studies at accredited Gambian institutions only — UTG, Gambia College, and other recognized local colleges.</div></div></div>
     <div class="faq-item"><button class="faq-q">I'm already enrolled at UTG. Can I still apply? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. The application has a dedicated section for currently enrolled students. You'll provide your current GPA, credit hours, and school activities.</div></div></div>
-    <div class="faq-item"><button class="faq-q">How will I be notified? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">All applicants are notified <strong>on or before the beginning of the academic year</strong>, by email to the address you provide. Make sure it is correct.</div></div></div>
-    <div class="faq-item"><button class="faq-q">Does the mentorship program affect my scholarship? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not at all. The mentorship and co-op programs are <strong>completely optional</strong> and have no effect on your scholarship application or selection.</div></div></div>
+    <div class="faq-item"><button class="faq-q">How will I be notified? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">All applicants are notified on or before the beginning of the academic year, by email to the address you provide. Make sure it is correct.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Does the mentorship program affect my scholarship? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not at all. The mentorship and internship programs are completely optional and have no effect on your scholarship application or selection.</div></div></div>
   </div>
 </section>
 
-<!-- APPLY CTA -->
+<!-- APPLY -->
 <div class="apply-cta" data-text="KSP" id="apply">
   <div class="section-label">Ready?</div>
   <h2>Kabisha <span>Scholars</span> Application</h2>
   <p>Read all instructions carefully before submitting. Use proper spelling — your award agreement is generated from your submitted information.</p>
-  <a href="https://form.jotform.com/261027760799164" class="btn btn-gold">Open Application Form →</a>
+  <a href="YOUR_JOTFORM_LINK_HERE" target="_blank" class="btn btn-gold">Open Application Form</a>
   <p class="apply-note">Rolling application — all applicants notified before the academic year begins.</p>
 </div>
 
@@ -189,17 +183,11 @@
     <p>University Scholarship · The Gambia</p>
     <div class="footer-links">
       <a href="index.html">Home</a>
-      <a href="highschool.html">High School Scholarship</a>
-      <a href="#faq">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="highschool.html">Secondary School Scholarship</a>
     </div>
   </div>
-  <div class="footer-flag">
-    <span style="background:#3A7728"></span>
-    <span style="background:#fff"></span>
-    <span style="background:#C8102E"></span>
-    <span style="background:#fff"></span>
-    <span style="background:#3A7728"></span>
-  </div>
+  <div class="footer-accent"></div>
 </footer>
 
 <script>
